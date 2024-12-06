@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="access/img/bookmark.png">
+    <link rel="stylesheet" href="access/css/all.css">
+    <link rel="stylesheet" href="access/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="access/css/style.css">
+    <link rel="stylesheet" href="access/css/media.css">
+    
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 mt-5 mb-5">
+                    <div class="bookmarker-container d-flex justify-content-center">
+                        <h1>Bookmarker</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="row outer-dashed">
+            <div class="col-sm-12">
+                 <div class="bookmark-form">
+                    <div class="d-flex justify-content-center mt-3">
+                        <h2>
+                            <i class="fa-solid fa-bookmark"></i>
+                              Bookmark your favorite sites
+                            <i class="fa-solid fa-bookmark"></i>
+                        </h2>
+                    </div>
+
+                    <form>
+                        <div>
+                            <label for="bookmarkName" class="label-text-style">
+                                <i class="fa-solid fa-book-bookmark pe-2 ps-1"></i> Site Name</label>
+                            <input id="bookmarkName" class="form-control mt-2" type="text" placeholder="Bookmark Name">
+                        </div>
+
+                        <div>
+                            <label for="bookmarkURL" class="mt-4 label-text-style">
+                                <i class="fa-solid fa-link pe-2 ps-1"></i> Site Name</label>
+                            <input id="bookmarkURL" class="form-control mt-2" type="text" placeholder="Website URL">
+                        </div>
+
+                        <div class="button-container d-flex justify-content-center mt-4 mb-4">
+                            <button onclick="addProduct()" type="button" id="btnsubmit" class=" btn btn-submit">Submit</button>
+                        </div>
+
+
+                        <div class="m-5">
+                            <label for="search" class="mt-4 label-text-style">
+                                <i class="fa-solid fa-magnifying-glass"></i> Search for Name</label>
+                            <input onkeyup="searchBookmarks()" id="search" class="form-control mt-2" type="text" placeholder="Search for Name">
+                        </div>
+                    </form>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <div class="row table-container">
+            <div class="col-sm-12">
+                <table class="w-100 mt-4 text-center">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th> 
+                            <th>UpDate</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablebodycontent">
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- model -->
+     <div class="modal shadow-lg" id="modal-body">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <button type="button" class="btn-close close-modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Site Name or Url is not valid, Please follow the <br>rules below :</p>
+                </div>
+                <div class="modal-footer">
+                    <li>
+                        <span>
+                            <i class="fa-regular fa-circle-right p-2 "></i>
+                            Site name must contain at least 3
+                            characters
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                              <i class="fa-regular fa-circle-right p-2 "></i>
+                               Site URL must be a valid one
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+
+     
+
+     <script src="access/js/bootstrap.bundle.min.js"></script>
+     <script src="access/js/main.js"></script>
+     <br>
+</body>
+</html>
